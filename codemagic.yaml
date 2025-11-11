@@ -8,8 +8,8 @@ workflows:
         - signing            # CERTIFICATE_P12, CERTIFICATE_PASSWORD, MOBILEPROVISION
         - appstore_connect   # APP_STORE_CONNECT_ISSUER_ID, APP_STORE_CONNECT_KEY_IDENTIFIER, APP_STORE_CONNECT_PRIVATE_KEY
       vars:
-        XCODE_PROJECT: "ChemShop.xcodeproj"   # или задай XCODE_WORKSPACE вместо XCODE_PROJECT
-        XCODE_SCHEME: "ChemShop"
+        XCODE_PROJECT: "PolishPostPilot.xcodeproj"   # или задай XCODE_WORKSPACE вместо XCODE_PROJECT
+        XCODE_SCHEME: "PolishPostPilot"
         BUNDLE_ID: "io.kramaremkoSW.polishPP"
         TEAM_ID: "OVERRIDE_BY_PROFILE"        # заменится значением из профиля
         EXPORT_METHOD: "app-store"
@@ -111,7 +111,7 @@ workflows:
 
       - name: "Archive and export IPA (xcodebuild)"
         script: |
-          ARCHIVE_PATH="$CM_BUILD_DIR/ChemShop.xcarchive"
+          ARCHIVE_PATH="$CM_BUILD_DIR/PolishPostPilot.xcarchive"
           EXPORT_PATH="$CM_EXPORT_DIR"
 
           # Доп. флаги версий прямо в xcodebuild (работает без Info.plist)
